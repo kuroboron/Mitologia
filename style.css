@@ -1,0 +1,113 @@
+.titulo{
+   background-image: url(sirena.gif);
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+}
+
+.titulo-texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 200px;
+    color:gold;
+    text-shadow: 
+    0 1px 0 goldenrod
+    0 2px 0 goldenrod
+    0 3px 0 goldenrod
+    0 4px 0 goldenrod
+    0 5px 0 goldenrod
+    0 6px 0 goldenrod
+    0 7px 0 goldenrod
+    0 8px 0 goldenrod
+    0 9px 0 goldenrod
+    0 10px 0 goldenrod
+    0 11px 0 goldenrod
+    1px 15px 10px rgba(16, 16, 16, 0.3)
+    1px 20px 20px rgba(16, 16, 16, 0.2)
+    1px 25px 40px rgba(16, 16, 16, 0.2)
+    1px 30px 80px rgba(16, 16, 16, 0.2)
+    1px 35px 160px rgba(16, 16, 16, 0.3);
+    
+}
+
+/* ==========================
+   VARIABLES
+   ========================== */
+   :root {
+    --carousel-control-color: white;
+    --carousel-control-width: 15%;
+    --carousel-control-opacity: 0.5;
+    --carousel-control-hover-opacity: 0.9;
+    --carousel-control-transition: opacity .15s ease;
+  
+    --carousel-indicator-width: 30px;
+    --carousel-indicator-height: 3px;
+    --carousel-indicator-opacity: 0.5;
+    --carousel-indicator-active-bg: white;
+    --carousel-indicator-active-opacity: 1;
+    --carousel-indicator-transition: opacity .6s ease;
+  
+    --carousel-caption-width: 70%;
+    --carousel-caption-color: white;
+    --carousel-caption-padding-y: 1.25rem;
+  
+    --carousel-control-icon-width: 2rem;
+  }
+  
+  /* ==========================
+     CARRUSEL
+     ========================== */
+  
+  /* Controles prev/next */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: var(--carousel-control-width);
+    opacity: var(--carousel-control-opacity);
+    transition: var(--carousel-control-transition);
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    opacity: var(--carousel-control-hover-opacity);
+  }
+  
+  /* Iconos prev/next */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1); /* Los hace blancos */
+    width: var(--carousel-control-icon-width);
+    height: var(--carousel-control-icon-width);
+  }
+  
+  /* Indicadores (los puntitos) */
+  .carousel-indicators [data-bs-target] {
+    width: var(--carousel-indicator-width);
+    height: var(--carousel-indicator-height);
+    opacity: var(--carousel-indicator-opacity);
+    transition: var(--carousel-indicator-transition);
+  }
+  
+  .carousel-indicators .active {
+    background-color: var(--carousel-indicator-active-bg);
+    opacity: var(--carousel-indicator-active-opacity);
+  }
+  
+  /* Texto en el carrusel */
+  .carousel-caption {
+    width: var(--carousel-caption-width);
+    color: var(--carousel-caption-color);
+    padding: var(--carousel-caption-padding-y) 0;
+  }
+
+  .carousel-item img {
+    height: 500px;           /* ajusta la altura a tu gusto */
+    object-fit: cover;       /* recorta la imagen manteniendo proporción */
+  }
+
+  #carouselExampleAutoplaying {
+    max-width: 800px;   /* ancho máximo que quieras */
+    margin: 0 auto;     /* lo centra horizontalmente */
+  }
+  
