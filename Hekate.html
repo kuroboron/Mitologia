@@ -1,0 +1,213 @@
+
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { Moon, Key, Flame, Stars } from "lucide-react";
+
+export default function Hekate() {
+  return (
+    <div className="min-h-screen p-8" style={{ background: 'linear-gradient(180deg, #0a0612 0%, #1a0a28 100%)' }}>
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12 relative">
+          <div className="absolute inset-0 -z-10 opacity-20"
+               style={{ 
+                 background: 'radial-gradient(circle, #9333ea 0%, transparent 70%)',
+                 filter: 'blur(60px)'
+               }} />
+          
+          <Moon className="w-20 h-20 mx-auto mb-6" style={{ color: '#c084fc', filter: 'drop-shadow(0 0 20px #c084fc)' }} />
+          
+          <h1 className="text-6xl font-bold mb-4"
+              style={{ 
+                color: '#c084fc', 
+                fontFamily: 'serif',
+                textShadow: '0 0 30px rgba(192, 132, 252, 0.5)'
+              }}>
+            HÉKATE
+          </h1>
+          
+          <div className="h-1 w-48 mx-auto mb-6" 
+               style={{ background: 'linear-gradient(90deg, transparent, #c084fc, transparent)' }} />
+          
+          <p className="text-xl mb-2" style={{ color: '#e9d5ff', fontStyle: 'italic' }}>
+            Diosa de la magia, los encantamientos y los conocimientos ocultos
+          </p>
+          <p className="text-lg" style={{ color: '#c084fc' }}>
+            Investigado por: <strong>Clara</strong>
+          </p>
+        </div>
+
+        {/* Gallery */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <Card className="overflow-hidden"
+                style={{ background: 'rgba(26, 10, 40, 0.8)', border: '2px solid #9333ea' }}>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68f136a490d9b0b42f8aa3b7/695b93ed2_Hekate1.jpg"
+              alt="Hékate 1"
+              className="w-full h-80 object-cover"
+              style={{ objectPosition: 'center 35%' }}
+            />
+          </Card>
+          <Card className="overflow-hidden"
+                style={{ background: 'rgba(26, 10, 40, 0.8)', border: '2px solid #9333ea' }}>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68f136a490d9b0b42f8aa3b7/03cd43924_Hekate2.jpg"
+              alt="Hékate 2"
+              className="w-full h-80 object-cover"
+              style={{ objectPosition: 'center 30%' }}
+            />
+          </Card>
+          <Card className="overflow-hidden"
+                style={{ background: 'rgba(26, 10, 40, 0.8)', border: '2px solid #9333ea' }}>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68f136a490d9b0b42f8aa3b7/f0f7d0228_Hekate3.jpg"
+              alt="Hékate 3"
+              className="w-full h-80 object-cover"
+              style={{ objectPosition: 'center 25%' }}
+            />
+          </Card>
+        </div>
+
+        {/* Main Content */}
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <Card className="p-8 relative overflow-hidden"
+                style={{ background: 'rgba(26, 10, 40, 0.9)', border: '2px solid #9333ea' }}>
+            <div className="absolute top-0 right-0 w-48 h-48 -mr-16 -mt-16 opacity-10">
+              <Moon className="w-full h-full" style={{ color: '#c084fc' }} />
+            </div>
+            
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"
+                style={{ color: '#c084fc', fontFamily: 'serif' }}>
+              <Stars className="w-8 h-8" />
+              Poder o Dominio
+            </h2>
+            
+            <p className="text-lg leading-relaxed" style={{ color: '#e9d5ff' }}>
+              Hékate es conocida como la <strong style={{ color: '#c084fc' }}>diosa de la magia</strong>, 
+              los encantamientos y los conocimientos ocultos y guardiana de los secretos, 
+              además era especialmente invocada en <strong style={{ color: '#c084fc' }}>rituales relacionados 
+              con la noche y la luna</strong>.
+            </p>
+          </Card>
+
+          <Card className="p-8 relative overflow-hidden"
+                style={{ background: 'rgba(26, 10, 40, 0.9)', border: '2px solid #9333ea' }}>
+            <div className="absolute top-0 right-0 w-48 h-48 -mr-16 -mt-16 opacity-10">
+              <Key className="w-full h-full" style={{ color: '#c084fc' }} />
+            </div>
+            
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"
+                style={{ color: '#c084fc', fontFamily: 'serif' }}>
+              <Key className="w-8 h-8" />
+              Atributos y Símbolos
+            </h2>
+            
+            <div className="space-y-4" style={{ color: '#e9d5ff' }}>
+              <p className="text-lg leading-relaxed">
+                A menudo era representada con <strong style={{ color: '#c084fc' }}>tres cuernos o tres cabezas</strong>, 
+                cada una mirando a distintas direcciones, y es frecuentemente representada con 
+                <strong style={{ color: '#c084fc' }}> dagas y cuchillo</strong>, herramientas de protección 
+                y poder en los rituales.
+              </p>
+              
+              <p className="text-lg leading-relaxed">
+                También se la representaba con <strong style={{ color: '#c084fc' }}>llaves</strong> para 
+                simbolizar su papel como guardiana de los secretos.
+              </p>
+            </div>
+          </Card>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <Card className="p-8 relative overflow-hidden"
+                style={{ background: 'rgba(26, 10, 40, 0.9)', border: '2px solid #9333ea' }}>
+            <div className="absolute bottom-0 left-0 w-full h-32 opacity-5"
+                 style={{ background: 'radial-gradient(circle, #c084fc 0%, transparent 70%)' }} />
+            
+            <h2 className="text-3xl font-bold mb-6"
+                style={{ color: '#c084fc', fontFamily: 'serif' }}>
+              Genealogía
+            </h2>
+            
+            <div className="space-y-4" style={{ color: '#e9d5ff' }}>
+              <div className="p-4 rounded-lg"
+                   style={{ background: 'rgba(147, 51, 234, 0.1)', border: '1px solid #9333ea' }}>
+                <p className="font-bold mb-2" style={{ color: '#c084fc' }}>Padre</p>
+                <p className="text-lg">
+                  <strong>Perses</strong>, titán del fuego destructor.
+                </p>
+              </div>
+              
+              <div className="p-4 rounded-lg"
+                   style={{ background: 'rgba(147, 51, 234, 0.1)', border: '1px solid #9333ea' }}>
+                <p className="font-bold mb-2" style={{ color: '#c084fc' }}>Madre</p>
+                <p className="text-lg">
+                  <strong>Asteria</strong>, titánide de las estrellas y la noche estrellada 
+                  (prima de Artemisa y Apolo).
+                </p>
+              </div>
+              
+              <div className="p-4 rounded-lg"
+                   style={{ background: 'rgba(147, 51, 234, 0.1)', border: '1px solid #9333ea' }}>
+                <p className="font-bold mb-2" style={{ color: '#c084fc' }}>Descendencia</p>
+                <p className="text-lg">No tuvo descendencia.</p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-8 relative overflow-hidden"
+                style={{ background: 'rgba(26, 10, 40, 0.9)', border: '2px solid #9333ea' }}>
+            <div className="absolute top-0 right-0 w-32 h-32 -mr-8 -mt-8 opacity-10">
+              <Flame className="w-full h-full" style={{ color: '#c084fc' }} />
+            </div>
+            
+            <h2 className="text-3xl font-bold mb-6"
+                style={{ color: '#c084fc', fontFamily: 'serif' }}>
+              Mitos Notables
+            </h2>
+            
+            <div className="space-y-4" style={{ color: '#e9d5ff' }}>
+              <h3 className="text-xl font-bold" style={{ color: '#a78bfa' }}>
+                Deméter y Perséfone
+              </h3>
+              
+              <p className="text-lg leading-relaxed">
+                Hay un mito de <strong style={{ color: '#c084fc' }}>Deméter y Perséfone</strong> en el que 
+                Hades se encapricha de Perséfone por su belleza y la secuestra hasta el inframundo.
+              </p>
+              
+              <p className="text-lg leading-relaxed">
+                Fue gracias a <strong style={{ color: '#c084fc' }}>Hékate</strong> que Deméter pudo enterarse 
+                de la situación e intentar recuperarla.
+              </p>
+              
+              <div className="mt-6 p-4 rounded-lg"
+                   style={{ background: 'rgba(147, 51, 234, 0.2)', border: '1px solid #c084fc' }}>
+                <p className="text-sm italic" style={{ color: '#c084fc' }}>
+                  Hékate actúa como mediadora entre el mundo de los vivos y el inframundo, 
+                  demostrando su papel como guardiana de los umbrales.
+                </p>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Footer Quote */}
+        <div className="text-center">
+          <Card className="p-8 relative overflow-hidden"
+                style={{ background: 'rgba(26, 10, 40, 0.8)', border: '2px solid #9333ea' }}>
+            <div className="absolute inset-0 opacity-5"
+                 style={{ background: 'radial-gradient(circle, #c084fc 0%, transparent 70%)' }} />
+            
+            <p className="text-2xl italic mb-4" style={{ color: '#c084fc' }}>
+              "Guardiana de los secretos, señora de la noche"
+            </p>
+            <p className="text-lg" style={{ color: '#e9d5ff' }}>
+              Hékate, la diosa de las encrucijadas entre los mundos
+            </p>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}
