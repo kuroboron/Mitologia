@@ -1,0 +1,268 @@
+
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { Zap, Users, BookOpen, Scroll } from "lucide-react";
+
+export default function Hermes() {
+  const contributors = [
+    { name: "Coke", section: "Dominio", icon: "🔥" },
+    { name: "Clara", section: "Mitos", icon: "🌙" },
+    { name: "David", section: "Genealogía", icon: "☀️" },
+    { name: "Marina", section: "Atributos", icon: "🎵" },
+  ];
+
+  return (
+    <div className="min-h-screen p-8" style={{ background: 'linear-gradient(180deg, #0f0820 0%, #1a0f30 100%)' }}>
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12 relative">
+          <div className="absolute inset-0 -z-10 opacity-30"
+               style={{ 
+                 background: 'radial-gradient(circle, #8b5cf6 0%, transparent 70%)',
+                 filter: 'blur(80px)'
+               }} />
+          
+          <Zap className="w-24 h-24 mx-auto mb-6" 
+               style={{ color: '#a78bfa', filter: 'drop-shadow(0 0 30px #8b5cf6)' }} />
+          
+          <h1 className="text-7xl font-bold mb-4"
+              style={{ 
+                color: '#a78bfa', 
+                fontFamily: 'serif',
+                textShadow: '0 0 40px rgba(167, 139, 250, 0.6)'
+              }}>
+            HERMES
+          </h1>
+          
+          <div className="h-1 w-64 mx-auto mb-6" 
+               style={{ background: 'linear-gradient(90deg, transparent, #a78bfa, transparent)' }} />
+          
+          <p className="text-2xl mb-4" style={{ color: '#e9d5ff', fontStyle: 'italic' }}>
+            Mensajero de los dioses y guía de las almas
+          </p>
+          
+          <div className="flex justify-center gap-8 mt-6">
+            {contributors.map((contributor, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <span className="text-2xl">{contributor.icon}</span>
+                <div className="text-left">
+                  <p className="font-bold" style={{ color: '#a78bfa' }}>{contributor.name}</p>
+                  <p className="text-sm" style={{ color: '#e9d5ff' }}>{contributor.section}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Gallery */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <Card className="overflow-hidden"
+                style={{ background: 'rgba(26, 15, 48, 0.8)', border: '3px solid #8b5cf6', boxShadow: '0 0 30px rgba(139, 92, 246, 0.3)' }}>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68f136a490d9b0b42f8aa3b7/5f8432578_Hermes1.jpg"
+              alt="Hermes 1"
+              className="w-full h-80 object-cover"
+              style={{ objectPosition: 'center 35%' }}
+            />
+          </Card>
+          <Card className="overflow-hidden"
+                style={{ background: 'rgba(26, 15, 48, 0.8)', border: '3px solid #8b5cf6', boxShadow: '0 0 30px rgba(139, 92, 246, 0.3)' }}>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68f136a490d9b0b42f8aa3b7/f7395ac5e_Hermes2.jpg"
+              alt="Hermes 2"
+              className="w-full h-80 object-cover"
+              style={{ objectPosition: 'center 30%' }}
+            />
+          </Card>
+          <Card className="overflow-hidden"
+                style={{ background: 'rgba(26, 15, 48, 0.8)', border: '3px solid #8b5cf6', boxShadow: '0 0 30px rgba(139, 92, 246, 0.3)' }}>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68f136a490d9b0b42f8aa3b7/456e3d9e7_Hermes3.jpg"
+              alt="Hermes 3"
+              className="w-full h-80 object-cover"
+              style={{ objectPosition: 'center 25%' }}
+            />
+          </Card>
+        </div>
+
+        {/* Atributos (Marina) */}
+        <Card className="p-8 mb-8 relative overflow-hidden"
+              style={{ background: 'rgba(26, 15, 48, 0.9)', border: '3px solid #8b5cf6', boxShadow: '0 0 30px rgba(139, 92, 246, 0.2)' }}>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-4xl">🎵</span>
+            <div>
+              <h2 className="text-4xl font-bold" style={{ color: '#a78b4fa', fontFamily: 'serif' }}>
+                Atributos
+              </h2>
+              <p className="text-lg" style={{ color: '#e9d5ff' }}>Por Marina</p>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6" style={{ color: '#e9d5ff' }}>
+            <div className="p-6 rounded-lg"
+                 style={{ background: 'rgba(139, 92, 246, 0.1)', border: '2px solid #8b5cf6' }}>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#a78bfa' }}>🐢 Tortuga</h3>
+              <p className="text-lg">
+                Creó la primera lira usando el caparazón de una tortuga
+              </p>
+            </div>
+            
+            <div className="p-6 rounded-lg"
+                 style={{ background: 'rgba(139, 92, 246, 0.1)', border: '2px solid #8b5cf6' }}>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#a78bfa' }}>🪽 Sombrero y zapatillas con alas</h3>
+              <p className="text-lg">
+                Símbolos de su velocidad como mensajero de los dioses
+              </p>
+            </div>
+            
+            <div className="p-6 rounded-lg"
+                 style={{ background: 'rgba(139, 92, 246, 0.1)', border: '2px solid #8b5cf6' }}>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#a78bfa' }}>💰 Bolsa</h3>
+              <p className="text-lg">
+                Como dios del comercio y los viajeros
+              </p>
+            </div>
+            
+            <div className="p-6 rounded-lg"
+                 style={{ background: 'rgba(139, 92, 246, 0.1)', border: '2px solid #8b5cf6' }}>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#a78bfa' }}>⚕️ Caduceo</h3>
+              <p className="text-lg">
+                Vara con dos serpientes entrelazadas, símbolo de su autoridad
+              </p>
+            </div>
+          </div>
+        </Card>
+
+        {/* Dominio (Coke) */}
+        <Card className="p-8 mb-8 relative overflow-hidden"
+              style={{ background: 'rgba(26, 15, 48, 0.9)', border: '3px solid #8b5cf6', boxShadow: '0 0 30px rgba(139, 92, 246, 0.2)' }}>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-4xl">🔥</span>
+            <div>
+              <h2 className="text-4xl font-bold" style={{ color: '#a78bfa', fontFamily: 'serif' }}>
+                Dominio
+              </h2>
+              <p className="text-lg" style={{ color: '#e9d5ff' }}>Por Coke</p>
+            </div>
+          </div>
+          
+          <p className="text-xl leading-relaxed mb-6" style={{ color: '#e9d5ff' }}>
+            Hermes es el <strong style={{ color: '#a78bfa' }}>mensajero de los dioses</strong>, 
+            dios del <strong style={{ color: '#a78bfa' }}>comercio, los viajeros, los ladrones</strong> y 
+            la <strong style={{ color: '#a78bfa' }}>astucia</strong>. También es el 
+            <strong style={{ color: '#a78bfa' }}> psicopompo</strong>, el guía de las almas hacia el inframundo.
+          </p>
+          
+          <div className="p-6 rounded-lg"
+               style={{ background: 'rgba(139, 92, 246, 0.15)', border: '2px solid #8b5cf6' }}>
+            <p className="text-lg italic" style={{ color: '#e9d5ff' }}>
+              No juzgaba ni castigaba, simplemente acompañaba a las almas de los muertos hasta las puertas 
+              del inframundo donde Hades se ocupaba de ellas con más interés y responsabilidad.
+            </p>
+          </div>
+        </Card>
+
+        {/* Genealogía (David) */}
+        <Card className="p-8 mb-8 relative overflow-hidden"
+              style={{ background: 'rgba(26, 15, 48, 0.9)', border: '3px solid #8b5cf6', boxShadow: '0 0 30px rgba(139, 92, 246, 0.2)' }}>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-4xl">☀️</span>
+            <div>
+              <h2 className="text-4xl font-bold" style={{ color: '#a78bfa', fontFamily: 'serif' }}>
+                Genealogía
+              </h2>
+              <p className="text-lg" style={{ color: '#e9d5ff' }}>Por David</p>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6" style={{ color: '#e9d5ff' }}>
+            <div className="p-6 rounded-lg"
+                 style={{ background: 'rgba(139, 92, 246, 0.1)', border: '2px solid #8b5cf6' }}>
+              <h3 className="text-2xl font-bold mb-4" style={{ color: '#a78bfa' }}>Padres</h3>
+              <p className="text-lg mb-2">
+                <strong>Padre:</strong> Zeus, rey de los dioses
+              </p>
+              <p className="text-lg">
+                <strong>Madre:</strong> Maia, una de las Pléyades (hijas del titán Atlas)
+              </p>
+            </div>
+            
+            <div className="p-6 rounded-lg"
+                 style={{ background: 'rgba(139, 92, 246, 0.1)', border: '2px solid #8b5cf6' }}>
+              <h3 className="text-2xl font-bold mb-4" style={{ color: '#a78bfa' }}>Hermanos</h3>
+              <p className="text-lg">
+                Numerosos hermanos por parte de Zeus, incluyendo:
+              </p>
+              <div className="mt-2 space-y-1">
+                <p className="text-base">• Apolo y Artemisa</p>
+                <p className="text-base">• Atenea</p>
+                <p className="text-base">• Ares</p>
+                <p className="text-base">• Dioniso</p>
+                <p className="text-base">• Hefesto</p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* Mitos (Clara) */}
+        <Card className="p-8 mb-8 relative overflow-hidden"
+              style={{ background: 'rgba(26, 15, 48, 0.9)', border: '3px solid #8b5cf6', boxShadow: '0 0 30px rgba(139, 92, 246, 0.2)' }}>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-4xl">🌙</span>
+            <div>
+              <h2 className="text-4xl font-bold" style={{ color: '#a78bfa', fontFamily: 'serif' }}>
+                Mitos de Hermes
+              </h2>
+              <p className="text-lg" style={{ color: '#e9d5ff' }}>Por Clara</p>
+            </div>
+          </div>
+          
+          <div className="space-y-6" style={{ color: '#e9d5ff' }}>
+            <p className="text-xl leading-relaxed">
+              Hermes no tiene mitos propiamente dichos pero una muy buena e importante de sus facetas es la de 
+              Hermes <strong style={{ color: '#a78bfa' }}>Psicopompo</strong>, el guía de las almas hacia el inframundo.
+            </p>
+            
+            <div className="p-6 rounded-lg"
+                 style={{ background: 'rgba(139, 92, 246, 0.15)', border: '2px solid #8b5cf6' }}>
+              <p className="text-lg leading-relaxed italic">
+                No juzgaba ni castigaba, simplemente acompañaba a las almas de los muertos hasta las puertas 
+                del inframundo donde Hades se ocupaba de ellas con más interés y responsabilidad.
+              </p>
+            </div>
+            
+            <p className="text-lg leading-relaxed">
+              De esta manera, <strong style={{ color: '#a78bfa' }}>Hermes representa la transición y el 
+              equilibrio entre la vida y la muerte</strong>, siendo un guía neutral y esencial en el paso 
+              de las almas al más allá.
+            </p>
+          </div>
+        </Card>
+
+        {/* Footer */}
+        <div className="text-center">
+          <Card className="p-8 relative overflow-hidden"
+                style={{ background: 'rgba(26, 15, 48, 0.8)', border: '3px solid #8b5cf6', boxShadow: '0 0 30px rgba(139, 92, 246, 0.3)' }}>
+            <div className="absolute inset-0 opacity-5"
+                 style={{ background: 'radial-gradient(circle, #a78bfa 0%, transparent 70%)' }} />
+            
+            <Zap className="w-16 h-16 mx-auto mb-4" style={{ color: '#a78bfa' }} />
+            <p className="text-2xl italic mb-3" style={{ color: '#a78bfa' }}>
+              "El mensajero veloz que une los mundos"
+            </p>
+            <p className="text-lg mb-4" style={{ color: '#e9d5ff' }}>
+              Hermes, símbolo de la comunicación, el comercio y la transición
+            </p>
+            
+            <div className="flex justify-center gap-4 mt-6">
+              <Users className="w-6 h-6" style={{ color: '#a78bfa' }} />
+              <p className="text-base" style={{ color: '#e9d5ff' }}>
+                Trabajo colaborativo de todos los miembros del grupo
+              </p>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}
