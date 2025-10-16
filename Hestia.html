@@ -1,0 +1,250 @@
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { Flame, Home, Heart, Shield, Users } from "lucide-react";
+
+export default function Hestia() {
+  return (
+    <div className="min-h-screen p-8" style={{ background: 'linear-gradient(180deg, #1a0808 0%, #2a1010 100%)' }}>
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12 relative">
+          <div className="absolute inset-0 -z-10 opacity-30"
+               style={{ 
+                 background: 'radial-gradient(circle, #dc2626 0%, transparent 70%)',
+                 filter: 'blur(80px)'
+               }} />
+          
+          <Flame className="w-24 h-24 mx-auto mb-6" 
+                 style={{ color: '#f87171', filter: 'drop-shadow(0 0 30px #dc2626)' }} />
+          
+          <h1 className="text-7xl font-bold mb-4"
+              style={{ 
+                color: '#f87171', 
+                fontFamily: 'serif',
+                textShadow: '0 0 40px rgba(248, 113, 113, 0.6)'
+              }}>
+            HESTIA
+          </h1>
+          
+          <div className="h-1 w-64 mx-auto mb-6" 
+               style={{ background: 'linear-gradient(90deg, transparent, #f87171, transparent)' }} />
+          
+          <p className="text-2xl mb-2" style={{ color: '#fecaca', fontStyle: 'italic' }}>
+            Diosa del hogar, el fuego sagrado y la familia
+          </p>
+          <p className="text-xl" style={{ color: '#f87171' }}>
+            Investigado por: <strong>Coke</strong>
+          </p>
+        </div>
+
+        {/* Gallery */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <Card className="overflow-hidden"
+                style={{ background: 'rgba(42, 16, 16, 0.8)', border: '3px solid #dc2626', boxShadow: '0 0 30px rgba(220, 38, 38, 0.3)' }}>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68f136a490d9b0b42f8aa3b7/3ad091813_Hestia1.jpg"
+              alt="Hestia 1"
+              className="w-full h-80 object-cover"
+              style={{ objectPosition: 'center 35%' }}
+            />
+          </Card>
+          <Card className="overflow-hidden"
+                style={{ background: 'rgba(42, 16, 16, 0.8)', border: '3px solid #dc2626', boxShadow: '0 0 30px rgba(220, 38, 38, 0.3)' }}>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68f136a490d9b0b42f8aa3b7/9c24f4c43_Hestia2.jpg"
+              alt="Hestia 2"
+              className="w-full h-80 object-cover"
+              style={{ objectPosition: 'center 30%' }}
+            />
+          </Card>
+          <Card className="overflow-hidden"
+                style={{ background: 'rgba(42, 16, 16, 0.8)', border: '3px solid #dc2626', boxShadow: '0 0 30px rgba(220, 38, 38, 0.3)' }}>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68f136a490d9b0b42f8aa3b7/0db9926e7_Hestia3.jpg"
+              alt="Hestia 3"
+              className="w-full h-80 object-cover"
+              style={{ objectPosition: 'center 25%' }}
+            />
+          </Card>
+        </div>
+
+        {/* Main Content Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <Card className="p-8 relative overflow-hidden"
+                style={{ background: 'rgba(42, 16, 16, 0.9)', border: '3px solid #dc2626', boxShadow: '0 0 30px rgba(220, 38, 38, 0.2)' }}>
+            <div className="absolute top-0 right-0 w-48 h-48 -mr-16 -mt-16 opacity-10">
+              <Flame className="w-full h-full" style={{ color: '#f87171' }} />
+            </div>
+            
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"
+                style={{ color: '#f87171', fontFamily: 'serif' }}>
+              <Shield className="w-8 h-8" />
+              Poder y Dominio
+            </h2>
+            
+            <p className="text-lg leading-relaxed" style={{ color: '#fecaca' }}>
+              En la mitología griega, Hestia poseía el poder como <strong style={{ color: '#f87171' }}>diosa del hogar</strong>, 
+              el <strong style={{ color: '#f87171' }}>fuego sagrado</strong> y la <strong style={{ color: '#f87171' }}>familia</strong>, 
+              y como tal, su poder se manifestaba en su capacidad para mantener la llama que otorgaba 
+              <strong style={{ color: '#f87171' }}> calor, seguridad y continuidad</strong> a las familias.
+            </p>
+            
+            <div className="mt-6 p-4 rounded-lg"
+                 style={{ background: 'rgba(220, 38, 38, 0.15)', border: '2px solid #dc2626' }}>
+              <p className="text-base" style={{ color: '#fecaca' }}>
+                Su poder era también la habilidad de ser venerada, recibiendo la 
+                <strong style={{ color: '#f87171' }}> primera ofrenda en todo sacrificio doméstico</strong> y 
+                asegurando la unidad del hogar.
+              </p>
+            </div>
+          </Card>
+
+          <Card className="p-8 relative overflow-hidden"
+                style={{ background: 'rgba(42, 16, 16, 0.9)', border: '3px solid #dc2626', boxShadow: '0 0 30px rgba(220, 38, 38, 0.2)' }}>
+            <div className="absolute top-0 right-0 w-48 h-48 -mr-16 -mt-16 opacity-10">
+              <Home className="w-full h-full" style={{ color: '#f87171' }} />
+            </div>
+            
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"
+                style={{ color: '#f87171', fontFamily: 'serif' }}>
+              <Heart className="w-8 h-8" />
+              Atributos y Símbolos
+            </h2>
+            
+            <div className="space-y-4" style={{ color: '#fecaca' }}>
+              <p className="text-lg leading-relaxed">
+                Representa la <strong style={{ color: '#f87171' }}>paz, la estabilidad y la unidad familiar</strong>, 
+                y como personificación del <strong style={{ color: '#f87171' }}>fuego sagrado del hogar</strong> 
+                (el hogar y la llama), representa la armonía, la hospitalidad y el refugio.
+              </p>
+              
+              <p className="text-lg leading-relaxed">
+                Se la asocia con la <strong style={{ color: '#f87171' }}>estabilidad del hogar y la ciudad</strong>, 
+                la virginidad y la <strong style={{ color: '#f87171' }}>protección de la familia y la comunidad</strong>.
+              </p>
+            </div>
+          </Card>
+        </div>
+
+        {/* Genealogía */}
+        <Card className="p-8 mb-8 relative overflow-hidden"
+              style={{ background: 'rgba(42, 16, 16, 0.9)', border: '3px solid #dc2626', boxShadow: '0 0 30px rgba(220, 38, 38, 0.2)' }}>
+          <div className="absolute bottom-0 right-0 w-64 h-64 -mr-20 -mb-20 opacity-5">
+            <Users className="w-full h-full" style={{ color: '#f87171' }} />
+          </div>
+          
+          <h2 className="text-4xl font-bold mb-6"
+              style={{ color: '#f87171', fontFamily: 'serif' }}>
+            Genealogía
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-6" style={{ color: '#fecaca' }}>
+            <div className="p-6 rounded-lg"
+                 style={{ background: 'rgba(220, 38, 38, 0.1)', border: '2px solid #dc2626' }}>
+              <p className="font-bold mb-3 text-xl" style={{ color: '#f87171' }}>Padres</p>
+              <p className="text-lg">
+                Hija primogénita del titán <strong style={{ color: '#f87171' }}>Crono</strong> y 
+                <strong style={{ color: '#f87171' }}> Rea</strong>.
+              </p>
+              <p className="text-base mt-3 italic">
+                Fue la primera en nacer y también la primera en ser devorada por su padre Cronos, 
+                quien temía ser derrocado por sus hijos.
+              </p>
+            </div>
+            
+            <div className="p-6 rounded-lg"
+                 style={{ background: 'rgba(220, 38, 38, 0.1)', border: '2px solid #dc2626' }}>
+              <p className="font-bold mb-3 text-xl" style={{ color: '#f87171' }}>Hermanos</p>
+              <p className="text-lg">
+                Hermana de los dioses olímpicos:
+              </p>
+              <div className="mt-3 space-y-1">
+                <p className="text-base"><strong>Zeus</strong></p>
+                <p className="text-base"><strong>Hera</strong></p>
+                <p className="text-base"><strong>Deméter</strong></p>
+                <p className="text-base"><strong>Hades</strong></p>
+                <p className="text-base"><strong>Poseidón</strong></p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-6 p-6 rounded-lg"
+               style={{ background: 'rgba(220, 38, 38, 0.15)', border: '2px solid #dc2626' }}>
+            <p className="text-lg" style={{ color: '#fecaca' }}>
+              Al final, fue liberada por <strong style={{ color: '#f87171' }}>Zeus</strong> y es venerada 
+              como la diosa griega del hogar, la familia y el fuego sagrado, equivalente a 
+              <strong style={{ color: '#f87171' }}> Vesta</strong> en la mitología romana.
+            </p>
+          </div>
+        </Card>
+
+        {/* Mito Notable */}
+        <Card className="p-8 mb-8 relative overflow-hidden"
+              style={{ background: 'rgba(42, 16, 16, 0.9)', border: '3px solid #dc2626', boxShadow: '0 0 30px rgba(220, 38, 38, 0.2)' }}>
+          <h2 className="text-4xl font-bold mb-6"
+              style={{ color: '#f87171', fontFamily: 'serif' }}>
+            Mitos Notables
+          </h2>
+          
+          <div className="space-y-4" style={{ color: '#fecaca' }}>
+            <p className="text-lg leading-relaxed">
+              Hestia era la diosa del hogar. Tanto el de los mortales como el de los propios olímpicos. 
+              Cuando <strong style={{ color: '#f87171' }}>Apolo y Poseidón</strong> la habían pretendido, 
+              había solicitado a Zeus el poder <strong style={{ color: '#f87171' }}>permanecer soltera y virgen</strong>. 
+              No salía del Olimpo ni tenía mitos propios.
+            </p>
+            
+            <div className="p-6 rounded-lg mt-6"
+                 style={{ background: 'rgba(220, 38, 38, 0.15)', border: '2px solid #dc2626' }}>
+              <h3 className="text-2xl font-bold mb-4" style={{ color: '#f87171' }}>
+                El Banquete de Cibeles
+              </h3>
+              
+              <p className="text-lg leading-relaxed mb-3">
+                Sin embargo, Ovidio narra una historia con ella como protagonista. 
+                <strong style={{ color: '#f87171' }}> Cibeles</strong> organizó una fiesta a la que invitó a los dioses, 
+                además de a sátiros y ninfas. Hubo uno que no estaba invitado, pero aun así hizo acto de presencia: 
+                <strong style={{ color: '#f87171' }}> Príapo</strong>.
+              </p>
+              
+              <p className="text-lg leading-relaxed mb-3">
+                Después de una noche en vela, donde hubo abundante vino, algunos de los invitados se tumbaron 
+                a dormir sobre la hierba. Entre ellos, la diosa Hestia. Príapo se acercó a ella sigilosamente, 
+                con intención de aprovecharse de su sueño.
+              </p>
+              
+              <p className="text-lg leading-relaxed mb-3">
+                Para su desgracia, no muy lejos se encontraba <strong style={{ color: '#f87171' }}>Sileno</strong> preparándose 
+                para volver a casa. Desató a su asno del lugar donde lo había dejado junto a un río y 
+                éste profirió un <strong style={{ color: '#f87171' }}>sonoro rebuzno que despertó a Hestia</strong>.
+              </p>
+              
+              <p className="text-lg leading-relaxed">
+                La diosa huyó y Príapo, que se había quedado con su miembro preparado, fue el hazmerreír del 
+                resto de dioses. Por ello, hizo pagar al asno con su vida. Más adelante, en la ciudad de Lámpsaco 
+                solía sacrificarse este animal diciendo <em>"Entrego a las llamas las entrañas del asno delator"</em>.
+              </p>
+            </div>
+          </div>
+        </Card>
+
+        {/* Footer */}
+        <div className="text-center">
+          <Card className="p-8 relative overflow-hidden"
+                style={{ background: 'rgba(42, 16, 16, 0.8)', border: '3px solid #dc2626', boxShadow: '0 0 30px rgba(220, 38, 38, 0.3)' }}>
+            <div className="absolute inset-0 opacity-5"
+                 style={{ background: 'radial-gradient(circle, #f87171 0%, transparent 70%)' }} />
+            
+            <Flame className="w-16 h-16 mx-auto mb-4" style={{ color: '#f87171' }} />
+            <p className="text-2xl italic mb-3" style={{ color: '#f87171' }}>
+              "La llama eterna que protege el hogar"
+            </p>
+            <p className="text-lg" style={{ color: '#fecaca' }}>
+              Hestia, guardiana de la familia y símbolo de la hospitalidad
+            </p>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}
