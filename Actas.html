@@ -1,0 +1,196 @@
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { Calendar, CheckCircle2, Users, Scroll } from "lucide-react";
+
+export default function Actas() {
+  const actas = [
+    {
+      day: "DÍA 1",
+      activities: [
+        "Planificación de cómo será la página web",
+        "Hemos acabado el título de la página web",
+        "Búsqueda de información sobre los Argonautas"
+      ]
+    },
+    {
+      day: "DÍA 2",
+      activities: [
+        "Esqueleto de la página web"
+      ]
+    },
+    {
+      day: "DÍA 3",
+      activities: [
+        "Cada integrante del grupo ha buscado información de su personaje/es",
+        "David: Información sobre el dios Apolo",
+        "Marina: Información sobre las musas",
+        "Coke: Información sobre Hestia",
+        "Clara: Información sobre Hécate"
+      ]
+    },
+    {
+      day: "DÍA 4",
+      activities: [
+        "Cada integrante del grupo ha buscado un poco de información sobre Hermés ya que este dios al ser cuatro miembros y cinco personajes, decidimos que lo más justo sería que cada persona hiciera una parte",
+        "Coke: dominio",
+        "Clara: mitos",
+        "David: genealogía",
+        "Marina: atributos"
+      ]
+    },
+    {
+      day: "DÍA 5",
+      activities: [
+        "Coke realizó la web prácticamente entera ya que él es el integrante que más sabía sobre el tema de hacerla y nosotros ayudamos con nuestra opinión",
+        "Finalización de la web con toda la información de los dioses que elegimos",
+        "Entrega del trabajo a la profesora ya que era el último día de trabajo"
+      ]
+    },
+    {
+      day: "DÍA 6 y FINAL",
+      activities: [
+        "En este último día, lo que haremos será la exposición del trabajo",
+        "Cada uno expondrá la parte que haya hecho en los días anteriores:",
+        "Coke: La diosa Hestia y el dominio de Hermés",
+        "David: El dios Apolo y la genealogía de Hermés",
+        "Marina: Las musas y atributos de Hermés",
+        "Clara: La diosa Hécate y los mitos de Hermés"
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen p-8" style={{ background: 'linear-gradient(180deg, #1a1410 0%, #0f0a08 100%)' }}>
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12 relative">
+          <div className="absolute inset-0 -z-10 opacity-20"
+               style={{ 
+                 background: 'radial-gradient(circle, var(--gold) 0%, transparent 70%)',
+                 filter: 'blur(60px)'
+               }} />
+          
+          <Scroll className="w-20 h-20 mx-auto mb-6 golden-glow" style={{ color: 'var(--gold)' }} />
+          
+          <h1 className="text-6xl font-bold mb-4 golden-glow"
+              style={{ 
+                color: 'var(--gold)', 
+                fontFamily: 'serif',
+                textShadow: '0 0 30px rgba(212,175,55,0.5)'
+              }}>
+            Actas del Proyecto
+          </h1>
+          
+          <div className="h-1 w-48 mx-auto mb-6" 
+               style={{ background: 'linear-gradient(90deg, transparent, var(--gold), transparent)' }} />
+          
+          <p className="text-xl" style={{ color: 'var(--cream)', fontStyle: 'italic' }}>
+            Registro de nuestro trabajo día a día
+          </p>
+        </div>
+
+        {/* Project Info */}
+        <Card className="greek-border p-8 mb-12 relative overflow-hidden golden-glow"
+              style={{ background: 'rgba(42, 24, 16, 0.9)' }}>
+          <div className="absolute top-0 right-0 w-48 h-48 -mr-16 -mt-16 opacity-5">
+            <Users className="w-full h-full" style={{ color: 'var(--gold)' }} />
+          </div>
+          
+          <h2 className="text-3xl font-bold mb-6" style={{ color: 'var(--gold)', fontFamily: 'serif' }}>
+            Los Argonautas
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-6" style={{ color: 'var(--cream)' }}>
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--terracotta)' }}>
+                Dioses Mayores
+              </h3>
+              <div className="space-y-2">
+                <p className="text-lg">• Apolo</p>
+                <p className="text-lg">• Hermes</p>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--terracotta)' }}>
+                Dioses Menores
+              </h3>
+              <div className="space-y-2">
+                <p className="text-lg">• Hestia</p>
+                <p className="text-lg">• Hécate</p>
+              </div>
+            </div>
+            
+            <div className="md:col-span-2">
+              <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--terracotta)' }}>
+                Grupo
+              </h3>
+              <p className="text-lg">• Musas</p>
+            </div>
+          </div>
+        </Card>
+
+        {/* Actas Timeline */}
+        <div className="space-y-6">
+          {actas.map((acta, index) => (
+            <Card key={index} 
+                  className="greek-border p-8 relative overflow-hidden golden-glow transition-all duration-300 hover:scale-[1.02]"
+                  style={{ background: 'rgba(42, 24, 16, 0.9)' }}>
+              <div className="absolute top-0 left-0 w-full h-2"
+                   style={{ background: 'linear-gradient(90deg, var(--gold), var(--bronze))' }} />
+              
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center golden-glow"
+                       style={{ background: 'linear-gradient(135deg, var(--gold) 0%, var(--bronze) 100%)' }}>
+                    {index === actas.length - 1 ? (
+                      <CheckCircle2 className="w-8 h-8 text-black" />
+                    ) : (
+                      <Calendar className="w-8 h-8 text-black" />
+                    )}
+                  </div>
+                </div>
+                
+                <div className="flex-1">
+                  <h3 className="text-3xl font-bold mb-6" 
+                      style={{ color: 'var(--gold)', fontFamily: 'serif' }}>
+                    {acta.day}
+                  </h3>
+                  
+                  <div className="space-y-3">
+                    {acta.activities.map((activity, actIndex) => (
+                      <div key={actIndex} className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" 
+                             style={{ background: 'var(--gold)' }} />
+                        <p className="text-lg leading-relaxed" style={{ color: 'var(--cream)' }}>
+                          {activity}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        {/* Footer */}
+        <div className="mt-12 text-center">
+          <Card className="greek-border p-8 relative overflow-hidden golden-glow"
+                style={{ background: 'rgba(42, 24, 16, 0.8)' }}>
+            <div className="absolute inset-0 opacity-5"
+                 style={{ background: 'radial-gradient(circle, var(--gold) 0%, transparent 70%)' }} />
+            
+            <CheckCircle2 className="w-12 h-12 mx-auto mb-4" style={{ color: 'var(--gold)' }} />
+            <p className="text-2xl italic mb-3" style={{ color: 'var(--gold)' }}>
+              Proyecto completado con éxito
+            </p>
+            <p className="text-lg" style={{ color: 'var(--cream)' }}>
+              Gracias a la colaboración de todo el equipo Los Argonautas
+            </p>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}
