@@ -1,0 +1,262 @@
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { Sun, Target, Music as MusicIcon, Sparkles, Award, Heart } from "lucide-react";
+
+export default function Apolo() {
+  const symbols = [
+    { name: "Arco y flechas", description: "Representa su victoria sobre el monstruo Pitón y su papel como dios de la peste", icon: Target },
+    { name: "La lira", description: "Símbolo más famoso, representa su dominio sobre la música", icon: MusicIcon },
+    { name: "El cuervo", description: "Símbolo de su ira - todos los cuervos se volvieron negros tras traerle malas noticias", icon: Sparkles },
+    { name: "Luz radiante", description: "Representa que es el dios del sol", icon: Sun },
+    { name: "Rama de laurel", description: "Representa su amor por Dafne, quien se transformó en laurel", icon: Heart },
+  ];
+
+  return (
+    <div className="min-h-screen p-8" style={{ background: 'linear-gradient(180deg, #1a0f08 0%, #2a1408 100%)' }}>
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12 relative">
+          <div className="absolute inset-0 -z-10 opacity-30"
+               style={{ 
+                 background: 'radial-gradient(circle, #f59e0b 0%, transparent 70%)',
+                 filter: 'blur(80px)'
+               }} />
+          
+          <Sun className="w-24 h-24 mx-auto mb-6" 
+               style={{ color: '#fbbf24', filter: 'drop-shadow(0 0 30px #f59e0b)' }} />
+          
+          <h1 className="text-7xl font-bold mb-4"
+              style={{ 
+                color: '#fbbf24', 
+                fontFamily: 'serif',
+                textShadow: '0 0 40px rgba(251, 191, 36, 0.6)'
+              }}>
+            APOLO
+          </h1>
+          
+          <div className="h-1 w-64 mx-auto mb-6" 
+               style={{ background: 'linear-gradient(90deg, transparent, #fbbf24, transparent)' }} />
+          
+          <p className="text-2xl mb-2" style={{ color: '#fef3c7', fontStyle: 'italic' }}>
+            Dios del sol, la música, la profecía y la curación
+          </p>
+          <p className="text-xl" style={{ color: '#fbbf24' }}>
+            Investigado por: <strong>David</strong>
+          </p>
+        </div>
+
+        {/* Gallery */}
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <Card className="overflow-hidden"
+                style={{ background: 'rgba(42, 20, 8, 0.8)', border: '3px solid #f59e0b', boxShadow: '0 0 30px rgba(245, 158, 11, 0.3)' }}>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68f136a490d9b0b42f8aa3b7/b5feda3ee_Apolo1.jpg"
+              alt="Apolo 1"
+              className="w-full h-96 object-cover"
+              style={{ objectPosition: 'center 30%' }}
+            />
+          </Card>
+          <Card className="overflow-hidden"
+                style={{ background: 'rgba(42, 20, 8, 0.8)', border: '3px solid #f59e0b', boxShadow: '0 0 30px rgba(245, 158, 11, 0.3)' }}>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68f136a490d9b0b42f8aa3b7/acd26abc5_Apolo2.jpg"
+              alt="Apolo 2"
+              className="w-full h-96 object-cover"
+              style={{ objectPosition: 'center 25%' }}
+            />
+          </Card>
+        </div>
+
+        {/* ¿Quién es Apolo? */}
+        <Card className="p-8 mb-8 relative overflow-hidden"
+              style={{ background: 'rgba(42, 20, 8, 0.9)', border: '3px solid #f59e0b', boxShadow: '0 0 30px rgba(245, 158, 11, 0.2)' }}>
+          <div className="absolute top-0 right-0 w-64 h-64 -mr-20 -mt-20 opacity-5">
+            <Sun className="w-full h-full" style={{ color: '#fbbf24' }} />
+          </div>
+          
+          <h2 className="text-4xl font-bold mb-6"
+              style={{ color: '#fbbf24', fontFamily: 'serif' }}>
+            ¿Quién es el dios griego Apolo?
+          </h2>
+          
+          <div className="space-y-4" style={{ color: '#fef3c7' }}>
+            <p className="text-lg leading-relaxed">
+              Apolo es un dios de la mitología griega y es uno de los <strong style={{ color: '#fbbf24' }}>"12 Olímpicos"</strong>. 
+              Es hijo de <strong style={{ color: '#fbbf24' }}>Zeus</strong> y <strong style={{ color: '#fbbf24' }}>Leto</strong>, 
+              y hermano gemelo de <strong style={{ color: '#fbbf24' }}>Artemisa</strong>.
+            </p>
+            
+            <p className="text-lg leading-relaxed">
+              Apolo es el dios de la <strong style={{ color: '#fbbf24' }}>curación, la medicina, el tiro con arco, 
+              la música, la poesía y el sol</strong>. Es el líder de las Musas. También es el dios de la profecía 
+              y es muy importante en el <strong style={{ color: '#fbbf24' }}>Oráculo de Delfos</strong>.
+            </p>
+            
+            <p className="text-lg leading-relaxed">
+              En el siglo V a. C., Apolo, también conocido como el <strong style={{ color: '#fbbf24' }}>dios del sol</strong>, 
+              se unió a Helios y recibió el nombre de <strong style={{ color: '#fbbf24' }}>Febo</strong>.
+            </p>
+
+            <div className="mt-6 p-6 rounded-lg"
+                 style={{ background: 'rgba(245, 158, 11, 0.15)', border: '2px solid #f59e0b' }}>
+              <p className="text-base italic" style={{ color: '#fbbf24' }}>
+                Todas las mañanas, Apolo volaba por el cielo en un carro dorado en llamas, 
+                trayendo la luz del sol al mundo.
+              </p>
+            </div>
+          </div>
+        </Card>
+
+        {/* Símbolos de Apolo */}
+        <h2 className="text-4xl font-bold mb-8 text-center" 
+            style={{ color: '#fbbf24', fontFamily: 'serif' }}>
+          Símbolos de Apolo
+        </h2>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {symbols.map((symbol, index) => (
+            <Card key={index} 
+                  className="p-6 transition-all duration-300 hover:scale-105 relative overflow-hidden"
+                  style={{ background: 'rgba(42, 20, 8, 0.9)', border: '2px solid #f59e0b', boxShadow: '0 0 20px rgba(245, 158, 11, 0.2)' }}>
+              <div className="absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 opacity-10">
+                <symbol.icon className="w-full h-full" style={{ color: '#fbbf24' }} />
+              </div>
+              
+              <div className="flex items-start gap-3 mb-4">
+                <div className="p-3 rounded-lg" style={{ background: 'rgba(245, 158, 11, 0.2)' }}>
+                  <symbol.icon className="w-8 h-8" style={{ color: '#fbbf24' }} />
+                </div>
+                <h3 className="text-xl font-bold flex-1" style={{ color: '#fbbf24', fontFamily: 'serif' }}>
+                  {symbol.name}
+                </h3>
+              </div>
+              
+              <p className="text-base" style={{ color: '#fef3c7' }}>
+                {symbol.description}
+              </p>
+            </Card>
+          ))}
+        </div>
+
+        {/* Familia Mitológica */}
+        <Card className="p-8 mb-8 relative overflow-hidden"
+              style={{ background: 'rgba(42, 20, 8, 0.9)', border: '3px solid #f59e0b', boxShadow: '0 0 30px rgba(245, 158, 11, 0.2)' }}>
+          <h2 className="text-4xl font-bold mb-6"
+              style={{ color: '#fbbf24', fontFamily: 'serif' }}>
+            Familia Mitológica
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-6" style={{ color: '#fef3c7' }}>
+            <div className="p-4 rounded-lg"
+                 style={{ background: 'rgba(245, 158, 11, 0.1)', border: '1px solid #f59e0b' }}>
+              <p className="font-bold mb-2 text-lg" style={{ color: '#fbbf24' }}>Padres</p>
+              <p className="text-base"><strong>Zeus</strong> y <strong>Leto</strong></p>
+            </div>
+            
+            <div className="p-4 rounded-lg"
+                 style={{ background: 'rgba(245, 158, 11, 0.1)', border: '1px solid #f59e0b' }}>
+              <p className="font-bold mb-2 text-lg" style={{ color: '#fbbf24' }}>Hermana gemela</p>
+              <p className="text-base"><strong>Artemisa</strong></p>
+            </div>
+            
+            <div className="p-4 rounded-lg"
+                 style={{ background: 'rgba(245, 158, 11, 0.1)', border: '1px solid #f59e0b' }}>
+              <p className="font-bold mb-2 text-lg" style={{ color: '#fbbf24' }}>Abuelos maternos</p>
+              <p className="text-base">Titanes <strong>Ceo</strong> y <strong>Febe</strong></p>
+            </div>
+          </div>
+          
+          <div className="mt-6 p-4 rounded-lg"
+               style={{ background: 'rgba(245, 158, 11, 0.1)', border: '1px solid #f59e0b' }}>
+            <p className="font-bold mb-2 text-lg" style={{ color: '#fbbf24' }}>Otros hermanos</p>
+            <p className="text-base">
+              Por parte de su padre: <strong>Hermes, Hefesto, Ares, Dioniso</strong>
+              <br />
+              Por parte de su madre: <strong>Asclepio, Halcyon Green</strong>
+            </p>
+          </div>
+        </Card>
+
+        {/* Mitos Notables */}
+        <h2 className="text-4xl font-bold mb-8 text-center" 
+            style={{ color: '#fbbf24', fontFamily: 'serif' }}>
+          Mitos Notables
+        </h2>
+        
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <Card className="p-8 relative overflow-hidden"
+                style={{ background: 'rgba(42, 20, 8, 0.9)', border: '2px solid #f59e0b', boxShadow: '0 0 20px rgba(245, 158, 11, 0.2)' }}>
+            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2"
+                style={{ color: '#fbbf24', fontFamily: 'serif' }}>
+              <Award className="w-6 h-6" />
+              Admeto
+            </h3>
+            
+            <div className="space-y-3" style={{ color: '#fef3c7' }}>
+              <p className="text-base leading-relaxed">
+                Cuando Zeus abatió al hijo de Apolo, <strong style={{ color: '#fbbf24' }}>Asclepio</strong>, 
+                con un rayo por resucitar a Hipólito de entre los muertos, Apolo mató en venganza a los Cíclopes.
+              </p>
+              
+              <p className="text-base leading-relaxed">
+                Como castigo, Apolo fue condenado a un año de trabajo forzado como pastor para el rey 
+                <strong style={{ color: '#fbbf24' }}> Admeto de Feres</strong> en Tesalia.
+              </p>
+              
+              <p className="text-base leading-relaxed">
+                Admeto trató bien a Apolo, quien en agradecimiento le concedió grandes beneficios, 
+                ayudándole a ganar a <strong style={{ color: '#fbbf24' }}>Alcestis</strong> y 
+                convenciendo a las Moiras para que le permitieran vivir más tiempo.
+              </p>
+            </div>
+          </Card>
+
+          <Card className="p-8 relative overflow-hidden"
+                style={{ background: 'rgba(42, 20, 8, 0.9)', border: '2px solid #f59e0b', boxShadow: '0 0 20px rgba(245, 158, 11, 0.2)' }}>
+            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2"
+                style={{ color: '#fbbf24', fontFamily: 'serif' }}>
+              <Sparkles className="w-6 h-6" />
+              Níobe
+            </h3>
+            
+            <div className="space-y-3" style={{ color: '#fef3c7' }}>
+              <p className="text-base leading-relaxed">
+                <strong style={{ color: '#fbbf24' }}>Níobe</strong>, una reina de Tebas, 
+                alardeó de su superioridad sobre Leto porque había tenido catorce hijos (los Nióbidas), 
+                mientras Leto había tenido solo dos.
+              </p>
+              
+              <p className="text-base leading-relaxed">
+                Apolo mató a sus hijos mientras practicaban atletismo y Artemisa a sus hijas, 
+                usando <strong style={{ color: '#fbbf24' }}>flechas envenenadas</strong>.
+              </p>
+              
+              <p className="text-base leading-relaxed">
+                Una desolada Níobe huyó al monte Sípilo en Asia Menor y 
+                <strong style={{ color: '#fbbf24' }}> se convirtió en piedra</strong> mientras lloraba. 
+                Sus lágrimas formaron el río Aqueloo.
+              </p>
+            </div>
+          </Card>
+        </div>
+
+        {/* Footer */}
+        <div className="text-center">
+          <Card className="p-8 relative overflow-hidden"
+                style={{ background: 'rgba(42, 20, 8, 0.8)', border: '3px solid #f59e0b', boxShadow: '0 0 30px rgba(245, 158, 11, 0.3)' }}>
+            <div className="absolute inset-0 opacity-5"
+                 style={{ background: 'radial-gradient(circle, #fbbf24 0%, transparent 70%)' }} />
+            
+            <Sun className="w-16 h-16 mx-auto mb-4" style={{ color: '#fbbf24' }} />
+            <p className="text-2xl italic mb-3" style={{ color: '#fbbf24' }}>
+              "El dios que ilumina el mundo con su carro dorado"
+            </p>
+            <p className="text-lg" style={{ color: '#fef3c7' }}>
+              Apolo, símbolo de la luz, la belleza y la armonía
+            </p>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}
